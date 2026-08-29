@@ -1,0 +1,136 @@
+{
+  "projects": [
+    {
+      "id": "retail-bi",
+      "order": 1,
+      "category": "Business Intelligence",
+      "title": "Retail Business Intelligence Dashboard",
+      "description": "An end-to-end Power BI solution designed to transform retail sales and customer data into clear commercial insights.",
+      "highlights": [
+        "Analyzed revenue, customer behavior, product performance, and branch trends",
+        "Built interactive KPI dashboards for business performance monitoring",
+        "Applied DAX, Power Query, and data modeling to create reliable reporting"
+      ],
+      "tools": ["Power BI", "DAX", "Power Query", "Data Modeling"],
+      "repositoryUrl": "https://github.com/Yasir101-hi/retail-business-intelligence-dashboard",
+      "imageUrl": "/assets/projects/retail-bi-dashboard.webp",
+      "caseStudy": {
+        "businessProblem": "Retail decision-makers needed a consolidated view of sales, customers, products, inventory, and branch performance.",
+        "dataset": "Retail business data covering sales, customer behavior, products, inventory, and branches.",
+        "analyticalApproach": [
+          "Cleaned and transformed the data with Power Query",
+          "Built a structured Power BI data model",
+          "Created DAX measures and KPI reporting",
+          "Designed interactive report pages for commercial and operational analysis"
+        ],
+        "keyFindings": [
+          "Revenue reached 965.79K, generating 375.35K in profit at a 38.86% margin",
+          "The Vape category produced 418.55K, or 43.34% of total revenue",
+          "Returning customers contributed 501.23K, or 51.9% of revenue",
+          "17 products reached the reorder threshold while overall inventory coverage remained 89.38%"
+        ],
+        "businessImplications": "The solution supports monitoring sales performance, customer behavior, product movement, inventory risk, and branch trends.",
+        "limitations": "Results depend on the completeness and accuracy of the supplied retail dataset."
+      }
+    },
+    {
+      "id": "university-db",
+      "order": 2,
+      "category": "Education Analytics",
+      "title": "University Database Analysis",
+      "description": "A database and business intelligence analysis of student performance, course capacity, teaching quality, and academic compliance.",
+      "highlights": [
+        "Analyzed 591 registered students and 2,065 enrollment and grade records",
+        "Measured an 87.36% A–D pass rate",
+        "Identified 203 prerequisite-violation enrollments affecting 183 students"
+      ],
+      "tools": ["SQL", "Python", "Power BI", "Data Modeling"],
+      "repositoryUrl": "https://github.com/Yasir101-hi/university-database-analysis-sql-python-powerbi",
+      "imageUrl": "/assets/projects/student-success.png",
+      "caseStudy": {
+        "businessProblem": "Academic stakeholders needed reliable reporting on student performance, course capacity, teaching quality, and prerequisite compliance.",
+        "dataset": "A university database containing 591 registered students and 2,065 enrollment and grade records.",
+        "analyticalApproach": [
+          "Queried and validated academic records using SQL",
+          "Used Python for data validation and analytical checks",
+          "Built Power BI dashboards for academic and operational reporting",
+          "Distinguished unique students from enrollment and grade records"
+        ],
+        "keyFindings": [
+          "591 registered students",
+          "2,065 enrollment and grade records",
+          "87.36% A-D pass rate",
+          "203 prerequisite-violation enrollments affecting 183 students"
+        ],
+        "businessImplications": "The analysis supports prerequisite enforcement, academic monitoring, capacity planning, and data-quality improvement.",
+        "limitations": "The available major information does not support claims about which named major is the largest."
+      }
+    },
+    {
+      "id": "oil-well-807",
+      "order": 3,
+      "category": "Energy Analytics",
+      "title": "Oil Well #807 Production Analysis",
+      "description": "A reproducible analysis of long-term oil production, pressure, water cut, decline behavior, and preliminary EOR screening.",
+      "highlights": [
+        "Analyzed 2,939 daily operating records from 2013 to January 2021",
+        "Measured an 89.8% decline in oil rate",
+        "Measured a 53.3% decline in pressure"
+      ],
+      "tools": ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+      "repositoryUrl": "https://github.com/Yasir101-hi/oil-well-807-analysis",
+      "imageUrl": "/assets/projects/oil-well-analysis.webp",
+      "caseStudy": {
+        "businessProblem": "The analysis examined long-term production decline, pressure depletion, water behavior, and preliminary indicators relevant to mature-well performance.",
+        "dataset": "2,939 daily operating records from January 2013 to January 2021.",
+        "analyticalApproach": [
+          "Cleaned and analyzed time-series operating data using Python and Pandas",
+          "Examined oil rate, pressure, water cut, and decline behavior",
+          "Created reproducible production visualizations",
+          "Performed preliminary EOR screening using limited available indicators"
+        ],
+        "keyFindings": [
+          "Oil rate declined by 89.8%",
+          "Pressure declined by 53.3%",
+          "The dataset contains 2,939 daily operating records",
+          "2021 contains only partial-year data"
+        ],
+        "businessImplications": "The findings support further technical investigation of mature-well performance and production-optimization options.",
+        "limitations": "The dataset alone does not establish the cause of the May 2020 interruption. EOR findings are preliminary screening only."
+      }
+    },
+    {
+      "id": "global-survey",
+      "order": 4,
+      "category": "Workforce Analytics",
+      "title": "Global Data Science Survey Analysis",
+      "description": "A reproducible analysis of global data-science demographics, professional roles, education, geography, and workforce representation.",
+      "highlights": [
+        "Analyzed 106,301 survey responses",
+        "Identified ages 25–34 as the largest age group",
+        "Identified Data Scientist as the largest professional role, with 17,128 respondents"
+      ],
+      "tools": ["Python", "Pandas", "Matplotlib", "Data Cleaning"],
+      "repositoryUrl": "https://github.com/Yasir101-hi/global-data-science-survey-analysis",
+      "imageUrl": "/assets/projects/global-survey-analysis.webp",
+      "caseStudy": {
+        "businessProblem": "The analysis examined global data-science demographics, professional roles, geography, education, and workforce representation.",
+        "dataset": "106,301 valid survey responses after removing the survey-question row.",
+        "analyticalApproach": [
+          "Cleaned and standardized survey responses using Python and Pandas",
+          "Corrected age-group and job-title mapping errors",
+          "Preserved important professional categories",
+          "Created corrected demographic and workforce visualizations"
+        ],
+        "keyFindings": [
+          "106,301 valid responses",
+          "Ages 25-34 represent the largest age group",
+          "Data Scientist is the largest professional role with 17,128 respondents",
+          "The selected Arab-country sample contains 2,292 respondents"
+        ],
+        "businessImplications": "The analysis provides evidence about workforce composition, professional roles, demographic representation, and regional participation.",
+        "limitations": "The analysis is descriptive and should not be used to infer causal relationships."
+      }
+    }
+  ]
+}
