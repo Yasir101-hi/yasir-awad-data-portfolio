@@ -467,7 +467,113 @@ function ExperienceItem({ item, index }: { item: typeof experienceGroups[0]["ite
   );
 }
 
+function ResumePage() {
+  React.useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Yasir Awad | Data Analyst Resume";
+    const robots = document.querySelector('meta[name="robots"]');
+    robots?.setAttribute("content", "noindex, follow");
+    return () => {
+      document.title = previousTitle;
+      robots?.setAttribute("content", "index, follow");
+    };
+  }, []);
+
+  return (
+    <main className="resume-page">
+      <div className="resume-toolbar">
+        <a href="/">← Back to Portfolio</a>
+        <button type="button" onClick={() => window.print()}>Print / Save as PDF</button>
+      </div>
+      <article className="resume-sheet">
+        <header className="resume-header">
+          <div>
+            <p className="resume-kicker">Data · Business Intelligence · Operations</p>
+            <h1>Yasir Awad</h1>
+            <h2>Data Analyst &amp; Business Intelligence</h2>
+          </div>
+          <address>
+            <span>Cairo, Egypt</span>
+            <a href="mailto:yasir.m.ahmed10@gmail.com">yasir.m.ahmed10@gmail.com</a>
+            <a href="https://www.linkedin.com/in/yasirawad">linkedin.com/in/yasirawad</a>
+            <a href="https://github.com/Yasir101-hi">github.com/Yasir101-hi</a>
+          </address>
+        </header>
+
+        <section className="resume-section resume-summary">
+          <h2>Professional Summary</h2>
+          <p>Data Analyst with hands-on experience using Power BI, SQL, Python, and Excel to develop dashboards, reports, and analytical solutions for business and operational use cases. Petroleum Engineering graduate with a strong foundation in technical analysis and data-driven decision-making.</p>
+        </section>
+
+        <section className="resume-section">
+          <h2>Core Skills</h2>
+          <div className="resume-skills">
+            <p><strong>Power BI:</strong> DAX, Power Query, Data Modeling, KPI Design</p>
+            <p><strong>SQL:</strong> Joins, CTEs, Window Functions, Query Optimization</p>
+            <p><strong>Python:</strong> Pandas, NumPy, Data Cleaning, Exploratory Analysis</p>
+            <p><strong>Excel:</strong> PivotTables, XLOOKUP, Reporting and Analysis</p>
+            <p><strong>Reporting:</strong> Data Visualization, Data Storytelling, Stakeholder Reporting</p>
+          </div>
+        </section>
+
+        <section className="resume-section">
+          <h2>Experience</h2>
+          {experienceGroups.map((group) => (
+            <div className="resume-experience-group" key={group.title}>
+              <h3>{group.title}</h3>
+              {group.items.map((item) => (
+                <article className="resume-role" key={`${group.title}-${item.role}`}>
+                  <div className="resume-role-heading">
+                    <div><h4>{item.role}</h4><p>{item.company}</p></div>
+                    <time>{item.date}</time>
+                  </div>
+                  <ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
+                </article>
+              ))}
+            </div>
+          ))}
+        </section>
+
+        <section className="resume-section resume-projects">
+          <h2>Selected Projects</h2>
+          {portfolioData.projects.map((project) => (
+            <article key={project.id}>
+              <div><h3>{project.title}</h3><span>{project.tools.join(" · ")}</span></div>
+              <p>{project.highlights[0]}</p>
+              <a href={project.repositoryUrl}>View on GitHub ↗</a>
+            </article>
+          ))}
+        </section>
+
+        <div className="resume-bottom-grid">
+          <section className="resume-section">
+            <h2>Education</h2>
+            <article className="resume-education">
+              <time>2016 — 2021</time>
+              <h3>Bachelor of Engineering (Honours)</h3>
+              <p>Petroleum Engineering<br />UCSI University, Malaysia</p>
+            </article>
+          </section>
+          <section className="resume-section">
+            <h2>Selected Certifications</h2>
+            <ul className="resume-certifications">
+              <li><strong>Microsoft Power BI Data Analyst (PL-300)</strong><span>Exam preparation in progress · 2026</span></li>
+              <li><strong>Data Analysis Diploma</strong><span>MEC Academy · 2025</span></li>
+              <li><strong>Data Analytics Job Simulation</strong><span>Deloitte / Forage · 2025</span></li>
+              <li><strong>Business Analysis Basics</strong><span>Great Learning · 2025</span></li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </main>
+  );
+}
+
 export default function App() {
+  if (window.location.pathname.replace(/\/+$/, "") === "/resume") {
+    return <ResumePage />;
+  }
+
   const [activeCaseStudy, setActiveCaseStudy] = React.useState<Project | null>(null);
   const [activeProjectImage, setActiveProjectImage] = React.useState<Project | null>(null);
   const [activeCertificate, setActiveCertificate] = React.useState<any | null>(null);
@@ -514,8 +620,7 @@ export default function App() {
           <p className="hero-intro text-justify">I turn complex business and operational data into clear dashboards, reliable reports, and decision-ready insights using Power BI, SQL, Python, and Excel.</p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">Explore Projects <Arrow /></a>
-            {/* The PDF is missing. The alert replaces a broken link as requested. */}
-            <a className="button secondary" href="#" onClick={(e) => { e.preventDefault(); alert('Please upload Yasir_Awad_Data_Analyst_CV.pdf to the public/ folder.'); }} aria-label="Download Yasir Awad’s Data Analyst CV">Download CV <Arrow direction="down" /></a>
+            <a className="button secondary" href="/resume" aria-label="View Yasir Awad’s online resume">View Resume <Arrow /></a>
           </div>
           <p className="hero-availability">Based in Cairo · Open to remote, relocation, and visa-sponsored opportunities</p>
           <div className="tool-strip" aria-label="Core tools">
