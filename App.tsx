@@ -760,8 +760,36 @@ export default function App() {
         </div>
       </section>
 
+      <section className="community section" id="community">
+        <div className="community-heading">
+          <p className="section-label">06 · Professional Community</p>
+          <h2>Connected to the regional<br /><em>data community.</em></h2>
+        </div>
+        <article className="membership-card">
+          <div className="membership-badge">
+            <img
+              src="/assets/community/arab-data-hub-badge.png"
+              alt="Arab Data Hub community badge"
+              loading="lazy"
+              width="320"
+              height="360"
+            />
+          </div>
+          <div className="membership-copy">
+            <p className="membership-status"><span aria-hidden="true" /> Active Member</p>
+            <h3>Arab Data Hub</h3>
+            <p className="membership-role">Professional Community Member</p>
+            <time>Member since 2026</time>
+            <p>Member of an Arab professional community focused on data analytics, knowledge sharing, continuous learning, and professional networking.</p>
+          </div>
+          <a className="membership-link" href="https://arabdatahub.org/" target="_blank" rel="noopener noreferrer">
+            Visit Community <Arrow />
+          </a>
+        </article>
+      </section>
+
       <section className="contact" id="contact">
-        <p className="section-label light">06 · Contact</p>
+        <p className="section-label light">07 · Contact</p>
         <h2>Let&apos;s turn data into clear decisions.</h2>
         <p className="text-justify">I am open to data analysis, business intelligence, reporting, business analysis, and operations analysis opportunities with remote, relocation, or visa-sponsorship options.</p>
         <a href="mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad&body=Hello%20Yasir%2C%0A%0AI%20viewed%20your%20data%20analytics%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0A%0ABest%20regards%2C" className="button primary contact-button">Email Me <Arrow /></a>
