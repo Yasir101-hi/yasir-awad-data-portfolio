@@ -19,19 +19,19 @@ a { color: inherit; text-decoration: none; }
 .site-header { height: 94px; padding: 0 clamp(24px, 5vw, 80px); display: flex; align-items: center; gap: 48px; color: white; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.12); position: sticky; top: 0; z-index: 50; }
 .brand { display: flex; align-items: center; white-space: nowrap; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-.coordinate-signature { position: relative; display: block; width: 190px; height: 66px; color: white; }
+.coordinate-signature { position: relative; display: block; width: 214px; height: 76px; color: white; }
 .coordinate-signature::before,
 .coordinate-signature::after { content: ""; position: absolute; background: var(--emerald-bright); opacity: .88; transition: opacity .2s ease, transform .25s ease; }
-.coordinate-signature::before { left: 0; top: 31px; width: 145px; height: 1px; transform-origin: left center; }
-.coordinate-signature::after { left: 61px; top: 3px; width: 1px; height: 58px; transform-origin: center bottom; }
+.coordinate-signature::before { left: 0; top: 38px; width: 158px; height: 1px; transform-origin: left center; }
+.coordinate-signature::after { left: 70px; top: 3px; width: 1px; height: 62px; transform-origin: center bottom; }
 .coordinate-name { position: absolute; z-index: 1; font: 500 25px/1 Georgia, 'Times New Roman', serif; letter-spacing: -.035em; }
-.coordinate-yasir { left: 3px; top: 7px; }
-.coordinate-awad { left: 70px; top: 36px; }
-.coordinate-origin { position: absolute; z-index: 2; left: 57px; top: 27px; width: 9px; height: 9px; border-radius: 50%; background: var(--emerald-bright); box-shadow: 0 0 0 4px rgba(34,181,132,.09); transition: box-shadow .25s ease, transform .25s ease; }
+.coordinate-yasir { left: 3px; top: 5px; }
+.coordinate-awad { left: 84px; top: 45px; }
+.coordinate-origin { position: absolute; z-index: 2; left: 65px; top: 33px; width: 11px; height: 11px; border-radius: 50%; background: var(--emerald-bright); box-shadow: 0 0 0 4px rgba(34,181,132,.09); transition: box-shadow .25s ease, transform .25s ease; }
 .coordinate-business,
 .coordinate-data { position: absolute; color: var(--emerald-bright); font: 700 8px/1 "Inter", Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
-.coordinate-business { left: 150px; top: 28px; }
-.coordinate-data { left: 49px; top: 57px; }
+.coordinate-business { left: 168px; top: 35px; }
+.coordinate-data { left: 48px; top: 68px; }
 .coordinate-brand:hover .coordinate-signature::before { transform: scaleX(1.04); opacity: 1; }
 .coordinate-brand:hover .coordinate-signature::after { transform: scaleY(1.06); opacity: 1; }
 .coordinate-brand:hover .coordinate-origin { transform: scale(1.12); box-shadow: 0 0 0 7px rgba(34,181,132,.12); }
@@ -322,13 +322,13 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
 }
 
 @media (max-width: 680px) {
-  .coordinate-signature { width: 126px; height: 52px; }
-  .coordinate-signature::before { top: 25px; width: 108px; }
-  .coordinate-signature::after { left: 48px; top: 3px; height: 45px; }
+  .coordinate-signature { width: 132px; height: 56px; }
+  .coordinate-signature::before { top: 29px; width: 112px; }
+  .coordinate-signature::after { left: 52px; top: 3px; height: 48px; }
   .coordinate-name { font-size: 20px; }
-  .coordinate-yasir { left: 1px; top: 4px; }
-  .coordinate-awad { left: 56px; top: 29px; }
-  .coordinate-origin { left: 44px; top: 21px; width: 8px; height: 8px; }
+  .coordinate-yasir { left: 1px; top: 2px; }
+  .coordinate-awad { left: 63px; top: 34px; }
+  .coordinate-origin { left: 48px; top: 25px; width: 9px; height: 9px; }
   .coordinate-business, .coordinate-data { display: none; }
   .header-cta { padding: 11px 13px; }
   .hero-copy { padding: 60px 22px 40px; }
