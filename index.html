@@ -80,5 +80,32 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+      (() => {
+        const primaryEmail = "yasir.m.ahmed10@gmail.com";
+        const ccEmail = "yasir.petro.analytics@outlook.com";
+
+        const normalizeMailtoLinks = () => {
+          document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+            const href = link.getAttribute("href");
+            if (!href) return;
+
+            const queryIndex = href.indexOf("?");
+            const query = queryIndex >= 0 ? href.slice(queryIndex + 1) : "";
+            const params = new URLSearchParams(query);
+            params.set("cc", ccEmail);
+
+            const queryString = params.toString();
+            link.setAttribute("href", `mailto:${primaryEmail}${queryString ? `?${queryString}` : ""}`);
+          });
+        };
+
+        normalizeMailtoLinks();
+        new MutationObserver(normalizeMailtoLinks).observe(document.getElementById("root"), {
+          childList: true,
+          subtree: true
+        });
+      })();
+    </script>
   </body>
 </html>
