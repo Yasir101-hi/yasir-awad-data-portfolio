@@ -610,7 +610,7 @@ export default function App() {
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="header-cta" href="mailto:yasir.m.ahmed10@gmail.com">Let&apos;s talk <Arrow /></a>
+        <a className="header-cta" href="mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad&body=Hello%20Yasir%2C%0A%0AI%20viewed%20your%20data%20analytics%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0A%0ABest%20regards%2C">Let&apos;s talk <Arrow /></a>
       </header>
 
       <section className="hero" id="home">
@@ -758,7 +758,7 @@ export default function App() {
         <p className="section-label light">06 · Contact</p>
         <h2>Let&apos;s turn data into clear decisions.</h2>
         <p className="text-justify">I am open to data analysis, business intelligence, reporting, business analysis, and operations analysis opportunities with remote, relocation, or visa-sponsorship options.</p>
-        <a href="mailto:yasir.m.ahmed10@gmail.com" className="button primary contact-button">Contact Me <Arrow /></a>
+        <a href="mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad&body=Hello%20Yasir%2C%0A%0AI%20viewed%20your%20data%20analytics%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0A%0ABest%20regards%2C" className="button primary contact-button">Email Me <Arrow /></a>
         <div className="contact-links">
           <a href="mailto:yasir.m.ahmed10@gmail.com" aria-label="Primary Email">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
