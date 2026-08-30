@@ -601,7 +601,10 @@ export default function App() {
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Yasir Awad home">
           <span className="monogram">YA</span>
-          <span>Yasir Awad</span>
+          <span className="brand-copy">
+            <strong>Yasir Awad</strong>
+            <small>Data Analyst &amp; BI</small>
+          </span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
