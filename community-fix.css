@@ -1,0 +1,113 @@
+.community .membership-card {
+  grid-template-columns: 230px minmax(0, 1fr) auto;
+  gap: clamp(30px, 3.5vw, 56px);
+  padding: clamp(32px, 3.6vw, 50px);
+}
+
+.community .membership-badge {
+  min-height: 250px;
+  padding-right: clamp(24px, 2.8vw, 40px);
+  position: relative;
+  align-content: center;
+  gap: 12px;
+}
+
+.community .membership-badge img {
+  width: min(100%, 185px);
+  height: 205px;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 10px 16px rgba(8, 27, 44, .08));
+}
+
+.community .membership-badge::after {
+  content: "ADH-00598";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 136px;
+  min-height: 36px;
+  padding: 7px 14px;
+  border: 1px solid rgba(20, 150, 109, .24);
+  border-radius: 999px;
+  background: rgba(20, 150, 109, .06);
+  color: var(--emerald);
+  font: 750 12px/1 "Inter", Arial, sans-serif;
+  letter-spacing: .12em;
+}
+
+.community .membership-copy {
+  align-self: center;
+}
+
+.community .membership-copy h3 {
+  margin-bottom: 8px;
+}
+
+.community .membership-role {
+  margin-bottom: 8px;
+}
+
+.community .membership-copy > p:last-child {
+  max-width: 660px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.community .membership-status {
+  margin-bottom: 14px;
+}
+
+.community .membership-link {
+  white-space: nowrap;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 980px) {
+  .community .membership-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .community .membership-link {
+    grid-column: 2;
+    justify-self: start;
+    align-self: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .community .membership-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 22px;
+  }
+
+  .community .membership-badge {
+    min-height: 0;
+    padding: 0 0 24px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .community .membership-badge img {
+    width: 145px;
+    height: 165px;
+  }
+
+  .community .membership-badge::after {
+    min-width: 126px;
+    min-height: 34px;
+    font-size: 11px;
+  }
+
+  .community .membership-copy > p:last-child {
+    text-align: left;
+  }
+
+  .community .membership-link {
+    grid-column: 1;
+  }
+}
