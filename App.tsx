@@ -599,12 +599,15 @@ export default function App() {
         />
       )}
       <header className="site-header">
-        <a className="brand" href="#home" aria-label="Yasir Awad home">
-          <span className="monogram">YA</span>
-          <span className="brand-copy">
-            <strong>Yasir Awad</strong>
-            <small>Data Analyst &amp; BI</small>
+        <a className="brand coordinate-brand" href="#home" aria-label="Yasir Awad — home">
+          <span className="coordinate-signature" aria-hidden="true">
+            <span className="coordinate-name coordinate-yasir">Yasir</span>
+            <span className="coordinate-name coordinate-awad">Awad</span>
+            <span className="coordinate-origin" />
+            <small className="coordinate-business">Business</small>
+            <small className="coordinate-data">Data</small>
           </span>
+          <span className="sr-only">Yasir Awad</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
