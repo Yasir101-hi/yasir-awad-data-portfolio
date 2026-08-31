@@ -71,12 +71,34 @@ const experienceGroups = [
   }
 ];
 
-const skills = [
-  ["Data Analysis", "Python", "Pandas", "NumPy", "Data Cleaning", "Exploratory Data Analysis"],
-  ["SQL & Databases", "SQL", "Joins", "CTEs", "Window Functions", "Query Optimization"],
-  ["Business Intelligence", "Power BI", "DAX", "Power Query", "Data Modeling", "KPI Design"],
-  ["Reporting", "Excel", "Pivot Tables", "Data Visualization", "Data Storytelling", "Reporting Automation"],
+const skillGroups = [
+  {
+    title: "Data Analysis",
+    icon: "analysis",
+    description: "Explore, clean, and analyze data to uncover insights and validate business questions.",
+    items: ["Python", "Pandas", "Data Cleaning", "EDA"]
+  },
+  {
+    title: "SQL & Databases",
+    icon: "database",
+    description: "Query relational data and build clear, reliable datasets for analysis.",
+    items: ["SQL", "Joins", "Aggregations", "CTEs", "Window Functions"]
+  },
+  {
+    title: "Business Intelligence",
+    icon: "bi",
+    description: "Build semantic models and dashboards that turn data into actionable insights.",
+    items: ["Power BI", "DAX", "Power Query", "Data Modeling", "KPI Design"]
+  },
+  {
+    title: "Reporting & Excel",
+    icon: "reporting",
+    description: "Create clear reports and visual summaries that support business decisions.",
+    items: ["Excel", "Pivot Tables", "XLOOKUP", "Data Visualization", "Dashboard Reporting"]
+  }
 ];
+
+const platforms = ["Power BI", "Microsoft Excel", "SQL Server", "Python", "Jupyter Notebook", "VS Code", "GitHub", "Kaggle"];
 
 const certificatesData = [
   {
@@ -446,6 +468,24 @@ const toolIcons = [
   }
 ];
 
+function SkillIcon({ type }: { type: string }) {
+  if (type === "analysis") return <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 36V10h25v18"/><path d="m12 29 6-7 5 4 7-10"/><circle cx="34" cy="34" r="8"/><path d="m40 40 5 5"/></svg>;
+  if (type === "database") return <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="22" cy="11" rx="14" ry="6"/><path d="M8 11v19c0 4 6 7 14 7 3 0 6-.4 8-1.2"/><path d="M8 20c0 4 6 7 14 7 3 0 6-.4 8-1.2"/><circle cx="36" cy="33" r="9"/><path d="M32 33h8"/></svg>;
+  if (type === "bi") return <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="7" width="38" height="28" rx="2"/><path d="M16 29v-8M24 29V13M32 29V18M18 41h12M24 35v6"/></svg>;
+  return <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 5h20l8 8v30H10z"/><path d="M30 5v9h8M16 23h16M16 30h9"/><circle cx="32" cy="32" r="6"/><path d="M32 26v6h6"/></svg>;
+}
+
+function PlatformIcon({ name }: { name: string }) {
+  if (name === "Power BI") return <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="6" height="11" rx="1"/><rect x="12" y="10" width="6" height="18" rx="1"/><rect x="20" y="4" width="6" height="24" rx="1"/></svg>;
+  if (name === "Microsoft Excel") return <span className="platform-letter excel-mark">X</span>;
+  if (name === "SQL Server") return <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="7" rx="11" ry="4"/><path d="M5 7v18c0 2 5 4 11 4s11-2 11-4V7M5 16c0 2 5 4 11 4s11-2 11-4"/></svg>;
+  if (name === "Python") return <span className="platform-letter python-mark">Py</span>;
+  if (name === "Jupyter Notebook") return <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12c3-7 17-7 20 0M6 20c3 7 17 7 20 0"/><circle cx="7" cy="6" r="2"/><circle cx="25" cy="25" r="1.5"/></svg>;
+  if (name === "VS Code") return <span className="platform-letter vscode-mark">&lt;/&gt;</span>;
+  if (name === "GitHub") return <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M11 23c0-3 2-4 5-4s5 1 5 4M10 12l2-3 4 2 4-2 2 3"/></svg>;
+  return <span className="platform-letter kaggle-mark">K</span>;
+}
+
 function ExperienceItem({ item, index }: { item: typeof experienceGroups[0]["items"][0], index: number }) {
   return (
     <article>
@@ -731,15 +771,30 @@ export default function App() {
       </section>
 
       <section className="skills section" id="skills">
-        <div className="skills-intro">
-          <p className="section-label light">04 · Capabilities</p>
-          <h2>A focused toolkit for turning data into <em>action.</em></h2>
-          <p className="text-justify">From querying and cleaning through modeling, visualization, and stakeholder-ready reporting.</p>
+        <div className="skills-heading">
+          <p className="section-label light">04 · Skills</p>
+          <h2>Technical skills, applied to <em>real business questions.</em></h2>
+          <p>A focused toolkit for analysis, modeling, visualization, and decision-ready reporting.</p>
         </div>
+
         <div className="skills-grid">
-          {skills.map(([title, ...items], index) => (
-            <article key={title}><span>0{index + 1}</span><h3>{title}</h3><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></article>
+          {skillGroups.map((group) => (
+            <article className="skill-card" key={group.title}>
+              <div className="skill-icon"><SkillIcon type={group.icon} /></div>
+              <h3>{group.title}</h3>
+              <p>{group.description}</p>
+              <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </article>
           ))}
+        </div>
+
+        <div className="platforms">
+          <div className="platforms-title"><span />Tools &amp; Platforms<span /></div>
+          <ul>
+            {platforms.map((name) => (
+              <li key={name}><span className="platform-icon"><PlatformIcon name={name} /></span>{name}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
