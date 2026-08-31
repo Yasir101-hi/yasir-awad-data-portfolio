@@ -164,12 +164,12 @@ h1 em, h2 em { color: var(--emerald); font-style: italic; }
 .credentials-intro h3 { font: 500 27px Georgia, serif; margin: 17px 0 14px; }
 .credentials-intro p { color: var(--slate); line-height: 1.55; }
 .education-field { margin: 0; font-size: 18px; font-weight: 650; color: var(--navy) !important; }
-.education-location { margin: 5px 0 0; font-size: 16px; }
-.university-visual { margin: 0; border: 1px solid var(--line); background: #fff; box-shadow: 0 18px 44px rgba(8, 27, 44, .09); overflow: hidden; }
-.university-campus { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: center; }
-.university-visual figcaption { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 22px; border-top: 1px solid var(--line); background: #fff; }
-.university-logo { display: block; width: min(190px, 55%); height: auto; object-fit: contain; }
-.university-visual figcaption span { color: var(--slate); font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; text-align: right; }
+.university-identity { width: min(100%, 370px); margin-top: 28px; padding: 18px 4px 17px; border-bottom: 1px solid var(--line); }
+.university-logo { display: block; width: min(300px, 92%); height: auto; object-fit: contain; object-position: left center; }
+.education-location { display: flex; align-items: center; gap: 10px; margin: 14px 0 0; color: var(--slate); font-size: 16px; }
+.education-location span { color: var(--emerald); font-size: 21px; line-height: 1; }
+.university-visual { margin: 0; border-radius: 18px; background: #fff; box-shadow: 0 18px 44px rgba(8, 27, 44, .09); overflow: hidden; }
+.university-campus { display: block; width: 100%; aspect-ratio: 1.26 / 1; object-fit: cover; object-position: center; }
 
 .certificates-gallery {
   display: grid;
@@ -387,9 +387,9 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .education-overview { gap: 34px; margin-bottom: 54px; }
   .credentials .education-date { font-size: 15px; }
   .credentials-intro h3 { font-size: 23px; }
-  .university-visual figcaption { min-height: 72px; padding: 15px 16px; gap: 14px; }
-  .university-logo { width: min(165px, 58%); }
-  .university-visual figcaption span { font-size: 9px; }
+  .university-identity { margin-top: 22px; }
+  .university-logo { width: min(270px, 90%); }
+  .university-visual { border-radius: 12px; }
   .membership-card { grid-template-columns: 1fr; gap: 26px; padding: 28px 22px; }
   .membership-badge { min-height: 0; padding: 0 0 26px; border-right: 0; border-bottom: 1px solid var(--line); }
   .membership-badge img { width: 128px; height: 150px; }
