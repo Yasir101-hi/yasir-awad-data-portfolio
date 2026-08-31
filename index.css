@@ -157,11 +157,19 @@ h1 em, h2 em { color: var(--emerald); font-style: italic; }
 .skills-grid ul { padding: 0; list-style: none; color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.8; }
 
 .credentials { background: var(--paper); }
-.credentials-intro { max-width: 800px; margin-bottom: 60px; }
+.education-overview { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); gap: clamp(54px, 8vw, 120px); align-items: end; margin-bottom: 72px; }
+.credentials-intro { max-width: 800px; margin: 0; }
 .credentials-intro > article { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--line); }
-.credentials time { color: var(--emerald); font-size: 11px; letter-spacing: .12em; }
-.credentials-intro h3 { font: 500 24px Georgia, serif; margin: 14px 0 5px; }
-.credentials-intro p { color: var(--slate); line-height: 1.6; }
+.credentials .education-date { display: inline-block; color: var(--emerald); font-size: 16px; font-weight: 800; line-height: 1.2; letter-spacing: .1em; }
+.credentials-intro h3 { font: 500 27px Georgia, serif; margin: 17px 0 14px; }
+.credentials-intro p { color: var(--slate); line-height: 1.55; }
+.education-field { margin: 0; font-size: 18px; font-weight: 650; color: var(--navy) !important; }
+.education-location { margin: 5px 0 0; font-size: 16px; }
+.university-visual { margin: 0; border: 1px solid var(--line); background: #fff; box-shadow: 0 18px 44px rgba(8, 27, 44, .09); overflow: hidden; }
+.university-campus { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: center; }
+.university-visual figcaption { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 22px; border-top: 1px solid var(--line); background: #fff; }
+.university-logo { display: block; width: min(190px, 55%); height: auto; object-fit: contain; }
+.university-visual figcaption span { color: var(--slate); font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; text-align: right; }
 
 .certificates-gallery {
   display: grid;
@@ -335,6 +343,8 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .project, .project:nth-child(even) { grid-template-columns: 1fr; gap: 45px; }
   .project:nth-child(even) .project-copy, .project:nth-child(even) .project-visual { order: initial; }
   .skills { grid-template-columns: 1fr; }
+  .education-overview { grid-template-columns: 1fr; gap: 42px; }
+  .university-visual { max-width: 720px; }
   .membership-card { grid-template-columns: 180px minmax(0, 1fr); }
   .membership-link { grid-column: 2; justify-self: start; }
 }
@@ -374,6 +384,12 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .skills-grid { grid-template-columns: 1fr; }
   .skills-grid article { min-height: auto; }
   .credentials { grid-template-columns: 1fr; }
+  .education-overview { gap: 34px; margin-bottom: 54px; }
+  .credentials .education-date { font-size: 15px; }
+  .credentials-intro h3 { font-size: 23px; }
+  .university-visual figcaption { min-height: 72px; padding: 15px 16px; gap: 14px; }
+  .university-logo { width: min(165px, 58%); }
+  .university-visual figcaption span { font-size: 9px; }
   .membership-card { grid-template-columns: 1fr; gap: 26px; padding: 28px 22px; }
   .membership-badge { min-height: 0; padding: 0 0 26px; border-right: 0; border-bottom: 1px solid var(--line); }
   .membership-badge img { width: 128px; height: 150px; }
