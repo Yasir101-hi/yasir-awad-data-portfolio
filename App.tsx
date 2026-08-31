@@ -435,43 +435,46 @@ function ProjectVisual({ project, onClick }: { project: Project; onClick: () => 
   return null;
 }
 
-const toolIcons = [
+const contactLinks = [
   {
-    name: 'SQL',
+    name: "Email",
+    href: "mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad",
+    external: false,
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-        <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
-        <path d="M3 12A9 3 0 0 0 21 12"></path>
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#159b74" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+        <path d="m3.5 7 7.3 5.1a2 2 0 0 0 2.4 0L20.5 7" />
       </svg>
     )
   },
   {
-    name: 'Power BI',
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/yasirawad",
+    external: true,
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <rect x="3" y="14" width="5" height="8" rx="1" fill="#F2C811" />
-        <rect x="9.5" y="8" width="5" height="14" rx="1" fill="#F2C811" />
-        <rect x="16" y="2" width="5" height="20" rx="1" fill="#F2C811" />
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#0A66C2" aria-hidden="true">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z" />
       </svg>
     )
   },
   {
-    name: 'Python',
+    name: "GitHub",
+    href: "https://github.com/Yasir101-hi",
+    external: true,
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <path fill="#38bdf8" d="M11.9.9C8.3.9 7 2 7 2L6.9 4.3h3.8v1.6H5.4c-2.3 0-3 1.8-3 3.3 0 1.6.7 3.3 3 3.3h1.8v-1.6s0-2.6 3-2.6h3.8c3 0 3-3 3-3V2.1H14.7c0 1.3-1.1 2.4-2.4 2.4C11 4.5 9.9 3.4 9.9 2.1 14.5.9 11.9.9 11.9.9z"/>
-        <path fill="#fde047" d="M12.1 23.1c3.6 0 4.9-1.1 4.9-1.1l.1-2.3h-3.8v-1.6h5.3c2.3 0 3-1.8 3-3.3 0-1.6-.7-3.3-3-3.3h-1.8v1.6s0 2.6-3 2.6H10c-3 0-3 3-3 3v3.2h2.3c0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4-4.6 1.2-2 1.2-2 1.2z"/>
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b2031" aria-hidden="true">
+        <path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.76.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .3Z" />
       </svg>
     )
   },
   {
-    name: 'Excel',
+    name: "Cairo, Egypt",
+    href: "https://www.google.com/maps/search/?api=1&query=Cairo%2C%20Egypt",
+    external: true,
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <path fill="#16a34a" d="M2.5 19.3L11.5 22V2L2.5 4.7z"/>
-        <path fill="#15803d" d="M11.5 2V22L21.5 19.3V4.7z"/>
-        <path fill="#ffffff" d="M16 16.2l-2.2-4.1 2.2-4.1h-1.8l-1.3 3-1.3-3H9.8l2.2 4.1-2.2 4.1h1.8l1.3-3 1.3 3z"/>
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#159b74" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.7" />
       </svg>
     )
   }
@@ -668,12 +671,18 @@ export default function App() {
             <a className="button secondary" href="/resume" aria-label="View Yasir Awad’s online resume">View Resume <Arrow /></a>
           </div>
           <p className="hero-availability">Based in Cairo · Open to remote, relocation, and visa-sponsored opportunities</p>
-          <div className="tool-strip" aria-label="Core tools">
-            {toolIcons.map((tool) => (
-              <span key={tool.name}>
-                {tool.icon}
-                {tool.name}
-              </span>
+          <div className="tool-strip" aria-label="Contact links">
+            {contactLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                aria-label={link.name}
+              >
+                {link.icon}
+                {link.name}
+              </a>
             ))}
           </div>
         </div>
