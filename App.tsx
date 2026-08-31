@@ -98,7 +98,16 @@ const skillGroups = [
   }
 ];
 
-const platforms = ["Power BI", "Microsoft Excel", "SQL Server", "Python", "Jupyter Notebook", "VS Code", "GitHub", "Kaggle"];
+const platforms = [
+  { name: "Power BI", icon: "https://cdn.simpleicons.org/powerbi/F2C811" },
+  { name: "Microsoft Excel", icon: "https://cdn.simpleicons.org/microsoftexcel/217346" },
+  { name: "SQL Server", icon: "https://cdn.simpleicons.org/microsoftsqlserver/CC2927" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+  { name: "Jupyter Notebook", icon: "https://cdn.simpleicons.org/jupyter/F37626" },
+  { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC" },
+  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF" },
+  { name: "Kaggle", icon: "https://cdn.simpleicons.org/kaggle/20BEFF" }
+];
 
 const certificatesData = [
   {
@@ -475,17 +484,6 @@ function SkillIcon({ type }: { type: string }) {
   return <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 5h20l8 8v30H10z"/><path d="M30 5v9h8M16 23h16M16 30h9"/><circle cx="32" cy="32" r="6"/><path d="M32 26v6h6"/></svg>;
 }
 
-function PlatformIcon({ name }: { name: string }) {
-  if (name === "Power BI") return <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="6" height="11" rx="1"/><rect x="12" y="10" width="6" height="18" rx="1"/><rect x="20" y="4" width="6" height="24" rx="1"/></svg>;
-  if (name === "Microsoft Excel") return <span className="platform-letter excel-mark">X</span>;
-  if (name === "SQL Server") return <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="7" rx="11" ry="4"/><path d="M5 7v18c0 2 5 4 11 4s11-2 11-4V7M5 16c0 2 5 4 11 4s11-2 11-4"/></svg>;
-  if (name === "Python") return <span className="platform-letter python-mark">Py</span>;
-  if (name === "Jupyter Notebook") return <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12c3-7 17-7 20 0M6 20c3 7 17 7 20 0"/><circle cx="7" cy="6" r="2"/><circle cx="25" cy="25" r="1.5"/></svg>;
-  if (name === "VS Code") return <span className="platform-letter vscode-mark">&lt;/&gt;</span>;
-  if (name === "GitHub") return <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M11 23c0-3 2-4 5-4s5 1 5 4M10 12l2-3 4 2 4-2 2 3"/></svg>;
-  return <span className="platform-letter kaggle-mark">K</span>;
-}
-
 function ExperienceItem({ item, index }: { item: typeof experienceGroups[0]["items"][0], index: number }) {
   return (
     <article>
@@ -791,8 +789,11 @@ export default function App() {
         <div className="platforms">
           <div className="platforms-title"><span />Tools &amp; Platforms<span /></div>
           <ul>
-            {platforms.map((name) => (
-              <li key={name}><span className="platform-icon"><PlatformIcon name={name} /></span>{name}</li>
+            {platforms.map((tool) => (
+              <li key={tool.name}>
+                <span className="platform-icon"><img src={tool.icon} alt="" loading="lazy" /></span>
+                {tool.name}
+              </li>
             ))}
           </ul>
         </div>
