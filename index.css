@@ -166,13 +166,7 @@ h1 em, h2 em { color: var(--emerald); font-style: italic; }
 .platforms ul { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
 .platforms li { min-height: 62px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 10px; border: 1px solid rgba(255,255,255,.17); color: rgba(255,255,255,.82); font-size: 12px; text-align: center; }
 .platform-icon { width: 27px; height: 27px; flex: 0 0 27px; display: grid; place-items: center; color: var(--emerald-bright); }
-.platform-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.platforms li:first-child .platform-icon svg { fill: #f2c811; stroke: none; }
-.platform-letter { width: 27px; height: 27px; display: grid; place-items: center; font-size: 11px; font-weight: 900; border-radius: 4px; }
-.excel-mark { color: #fff; background: #16834a; font-size: 17px; }
-.python-mark { color: #0b2239; background: #ffd43b; }
-.vscode-mark { color: #fff; background: #168bd2; font-size: 9px; }
-.kaggle-mark { color: #20b9e8; font-size: 24px; font-family: Arial, sans-serif; }
+.platform-icon img { display: block; width: 27px; height: 27px; object-fit: contain; }
 
 
 @media (max-width: 1180px) {
