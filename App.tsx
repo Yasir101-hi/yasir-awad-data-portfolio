@@ -614,6 +614,7 @@ export default function App() {
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
+          <a href="#education">Credentials</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="header-cta" href="mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad&body=Hello%20Yasir%2C%0A%0AI%20viewed%20your%20data%20analytics%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0A%0ABest%20regards%2C">Let&apos;s talk <Arrow /></a>
@@ -745,7 +746,7 @@ export default function App() {
       <section className="credentials section" id="education">
         <div className="education-overview">
           <div className="credentials-intro">
-            <p className="section-label">05 · Education & Certifications</p>
+            <p className="section-label">05 · Credentials</p>
             <h2>Petroleum Engineering,<br /><em>analytical by design.</em></h2>
             <article>
               <time className="education-date">2016 — 2021</time>
