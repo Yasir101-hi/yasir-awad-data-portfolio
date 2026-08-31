@@ -751,7 +751,20 @@ export default function App() {
               <time className="education-date">2016 — 2021</time>
               <h3>Bachelor of Engineering (Honours)</h3>
               <p className="education-field">Petroleum Engineering</p>
-              <p className="education-location">UCSI University · Kuala Lumpur, Malaysia</p>
+              <div className="university-identity">
+                <img
+                  className="university-logo"
+                  src="https://cdn.brandfetch.io/idSoVuR0Xz/w/300/h/63/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1778397416464"
+                  alt="UCSI University"
+                  loading="lazy"
+                  width="300"
+                  height="63"
+                />
+              </div>
+              <p className="education-location">
+                <span aria-hidden="true">⌖</span>
+                Kuala Lumpur, Malaysia
+              </p>
             </article>
           </div>
 
@@ -764,17 +777,6 @@ export default function App() {
               width="900"
               height="700"
             />
-            <figcaption>
-              <img
-                className="university-logo"
-                src="https://cdn.brandfetch.io/idSoVuR0Xz/w/300/h/63/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1778397416464"
-                alt="UCSI University"
-                loading="lazy"
-                width="300"
-                height="63"
-              />
-              <span>Kuala Lumpur Campus</span>
-            </figcaption>
           </figure>
         </div>
         
