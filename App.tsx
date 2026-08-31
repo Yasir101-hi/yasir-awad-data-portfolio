@@ -771,7 +771,7 @@ export default function App() {
           <figure className="university-visual">
             <img
               className="university-campus"
-              src="https://studymalaysia.co.id/wp-content/uploads/2021/09/biaya-kuliah-di-ucsi-kuala-lumpur.jpg"
+              src="https://studycomet.com/wp-content/uploads/UCSI1.png"
               alt="UCSI University campus in Kuala Lumpur, Malaysia"
               loading="lazy"
               width="900"
