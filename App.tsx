@@ -743,14 +743,39 @@ export default function App() {
       </section>
 
       <section className="credentials section" id="education">
-        <div className="credentials-intro">
-          <p className="section-label">05 · Education & Certifications</p>
-          <h2>Petroleum Engineering,<br /><em>analytical by design.</em></h2>
-          <article>
-            <time>2016 — 2021</time>
-            <h3>Bachelor of Engineering (Honours)</h3>
-            <p className="text-justify">Petroleum Engineering<br/>UCSI University, Malaysia</p>
-          </article>
+        <div className="education-overview">
+          <div className="credentials-intro">
+            <p className="section-label">05 · Education & Certifications</p>
+            <h2>Petroleum Engineering,<br /><em>analytical by design.</em></h2>
+            <article>
+              <time className="education-date">2016 — 2021</time>
+              <h3>Bachelor of Engineering (Honours)</h3>
+              <p className="education-field">Petroleum Engineering</p>
+              <p className="education-location">UCSI University · Kuala Lumpur, Malaysia</p>
+            </article>
+          </div>
+
+          <figure className="university-visual">
+            <img
+              className="university-campus"
+              src="https://studymalaysia.co.id/wp-content/uploads/2021/09/biaya-kuliah-di-ucsi-kuala-lumpur.jpg"
+              alt="UCSI University campus in Kuala Lumpur, Malaysia"
+              loading="lazy"
+              width="900"
+              height="700"
+            />
+            <figcaption>
+              <img
+                className="university-logo"
+                src="https://cdn.brandfetch.io/idSoVuR0Xz/w/300/h/63/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1778397416464"
+                alt="UCSI University"
+                loading="lazy"
+                width="300"
+                height="63"
+              />
+              <span>Kuala Lumpur Campus</span>
+            </figcaption>
+          </figure>
         </div>
         
         <div className="certificates-gallery">
