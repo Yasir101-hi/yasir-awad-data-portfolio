@@ -768,7 +768,7 @@ export default function App() {
         <article className="membership-card">
           <div className="membership-badge">
             <img
-              src="/assets/community/arab-data-hub-badge.png"
+              src="/assets/community/arab-data-hub-badge.webp"
               alt="Arab Data Hub community badge"
               loading="lazy"
               width="320"
