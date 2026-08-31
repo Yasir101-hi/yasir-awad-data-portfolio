@@ -99,14 +99,14 @@ const skillGroups = [
 ];
 
 const platforms = [
-  { name: "Power BI", icon: "https://cdn.simpleicons.org/powerbi/F2C811" },
-  { name: "Microsoft Excel", icon: "https://cdn.simpleicons.org/microsoftexcel/217346" },
-  { name: "SQL Server", icon: "https://cdn.simpleicons.org/microsoftsqlserver/CC2927" },
-  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
-  { name: "Jupyter Notebook", icon: "https://cdn.simpleicons.org/jupyter/F37626" },
-  { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC" },
-  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF" },
-  { name: "Kaggle", icon: "https://cdn.simpleicons.org/kaggle/20BEFF" }
+  { name: "Power BI", icon: "/assets/tools/power-bi.svg", short: "PBI" },
+  { name: "Microsoft Excel", icon: "/assets/tools/microsoft-excel.svg", short: "XL" },
+  { name: "SQL Server", icon: "/assets/tools/sql-server.svg", short: "SQL" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB", short: "Py" },
+  { name: "Jupyter Notebook", icon: "https://cdn.simpleicons.org/jupyter/F37626", short: "JN" },
+  { name: "VS Code", icon: "/assets/tools/vs-code.svg", short: "VS" },
+  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF", short: "GH" },
+  { name: "Kaggle", icon: "https://cdn.simpleicons.org/kaggle/20BEFF", short: "K" }
 ];
 
 const certificatesData = [
@@ -791,7 +791,35 @@ export default function App() {
           <ul>
             {platforms.map((tool) => (
               <li key={tool.name}>
-                <span className="platform-icon"><img src={tool.icon} alt="" loading="lazy" /></span>
+                <span className="platform-icon">
+                  <img
+                    src={tool.icon}
+                    alt=""
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                      const fallback = event.currentTarget.nextElementSibling as HTMLElement | null;
+                      if (fallback) fallback.style.display = "flex";
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      display: "none",
+                      width: "27px",
+                      height: "27px",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "1px solid currentColor",
+                      borderRadius: "4px",
+                      color: "var(--emerald-bright)",
+                      fontSize: "9px",
+                      fontWeight: 800
+                    }}
+                  >
+                    {tool.short}
+                  </span>
+                </span>
                 {tool.name}
               </li>
             ))}
