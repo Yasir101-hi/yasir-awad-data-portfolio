@@ -771,7 +771,7 @@ export default function App() {
           <figure className="university-visual">
             <img
               className="university-campus"
-              src="/assets/education/ucsi-campus.png"
+              src="/assets/education/ucsi-campus.webp"
               alt="UCSI University campus in Kuala Lumpur, Malaysia"
               loading="lazy"
               width="900"
