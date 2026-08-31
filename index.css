@@ -44,7 +44,7 @@ nav a:hover::after { right: 0; }
 
 .hero { min-height: calc(100vh - 94px); display: grid; grid-template-columns: 53% 47%; overflow: hidden; background: var(--paper); }
 .hero-copy { padding: clamp(70px, 8vw, 125px) clamp(30px, 6vw, 92px) 36px; position: relative; z-index: 2; clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%); background: var(--paper); }
-.kicker, .section-label { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 750; }
+.kicker, .section-label { text-transform: uppercase; letter-spacing: .13em; font-size: 14px; line-height: 1.35; font-weight: 800; }
 .kicker { display: flex; align-items: center; gap: 10px; color: var(--emerald); }
 .kicker span { width: 28px; height: 1px; background: var(--emerald); }
 h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.045em; }
@@ -350,6 +350,7 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
 }
 
 @media (max-width: 680px) {
+  .section-label { font-size: 12px; letter-spacing: .12em; }
   .coordinate-signature { width: 132px; height: 56px; }
   .coordinate-signature::before { top: 29px; width: 112px; }
   .coordinate-signature::after { left: 52px; top: 3px; height: 48px; }
