@@ -687,19 +687,15 @@ export default function App() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Abstract data analytics portrait">
-          <div className="grid-lines" />
-          <div className="portrait">
-            <div className="portrait-head" />
-            <div className="portrait-body" />
-          </div>
-          <div className="hero-chart">
-            <svg viewBox="0 0 420 240" preserveAspectRatio="none">
-              <path className="hero-line" d="M0 202 L55 171 L92 184 L140 128 L191 149 L244 91 L285 108 L337 49 L370 62 L420 15" />
-              {[['55','171'],['140','128'],['244','91'],['337','49'],['420','15']].map(([cx,cy]) => <circle key={cx} cx={cx} cy={cy} r="5" />)}
-            </svg>
-          </div>
-          <div className="hero-label"><span>Decision-ready</span><strong>Analytics</strong></div>
+        <div className="hero-visual hero-portrait-visual" aria-label="Professional portrait of Yasir Awad">
+          <img
+            className="hero-portrait-image"
+            src="/assets/hero/yasir-portrait-v1.webp"
+            alt="Yasir Awad, Data Analyst and Business Intelligence professional"
+            width="1374"
+            height="1145"
+            fetchPriority="high"
+          />
         </div>
       </section>
 
