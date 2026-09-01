@@ -43,7 +43,7 @@ nav a:hover::after { right: 0; }
 .header-cta { font-size: 15px; display: flex; align-items: center; gap: 10px; padding: 13px 18px; border: 1px solid rgba(255,255,255,.25); }
 
 .hero { min-height: calc(100svh - 94px); display: grid; grid-template-columns: 53% 47%; align-items: stretch; overflow: hidden; background: var(--paper); }
-.hero-copy { padding: clamp(42px, 5vh, 58px) clamp(30px, 6vw, 92px) 24px; position: relative; z-index: 2; clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%); background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
+.hero-copy { padding: clamp(42px, 5vh, 58px) clamp(30px, 6vw, 92px) 24px; position: relative; z-index: 2; clip-path: none; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
 .kicker, .section-label { text-transform: uppercase; letter-spacing: .13em; font-size: 14px; line-height: 1.35; font-weight: 800; }
 .kicker { display: flex; align-items: center; gap: 10px; color: var(--emerald); }
 .kicker span { width: 28px; height: 1px; background: var(--emerald); }
