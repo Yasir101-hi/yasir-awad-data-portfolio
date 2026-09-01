@@ -690,10 +690,10 @@ export default function App() {
         <div className="hero-visual hero-portrait-visual" aria-label="Professional portrait of Yasir Awad">
           <img
             className="hero-portrait-image"
-            src="/assets/hero/yasir-portrait-v1.webp"
+            src="/assets/hero/yasir-portrait-option-04.webp"
             alt="Yasir Awad, Data Analyst and Business Intelligence professional"
-            width="1374"
-            height="1145"
+            width="1555"
+            height="1012"
             fetchPriority="high"
           />
         </div>
