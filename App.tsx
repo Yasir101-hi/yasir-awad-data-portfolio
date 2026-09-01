@@ -870,6 +870,31 @@ export default function App() {
           </figure>
         </div>
         
+        <article className="certification-progress" aria-labelledby="pl300-title">
+          <div className="certification-progress-copy">
+            <p className="certification-progress-status"><span aria-hidden="true" /> Certification in progress</p>
+            <p className="certification-progress-kicker">Microsoft certification preparation</p>
+            <h3 id="pl300-title">Microsoft Power BI Data Analyst <span>(PL-300)</span></h3>
+            <p>Currently preparing for the PL-300 exam, with focused practice in data preparation, modeling, DAX, visualization, and Power BI Service.</p>
+            <ul aria-label="PL-300 preparation focus areas">
+              <li>Data preparation</li>
+              <li>Data modeling</li>
+              <li>DAX</li>
+              <li>Power BI Service</li>
+            </ul>
+          </div>
+          <div className="certification-progress-visual" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <rect x="8" y="35" width="12" height="21" rx="2" />
+              <rect x="25" y="22" width="12" height="34" rx="2" />
+              <rect x="42" y="8" width="12" height="48" rx="2" />
+            </svg>
+            <strong>PL-300</strong>
+            <span>Exam preparation</span>
+            <small>In progress</small>
+          </div>
+        </article>
+
         <div className="certificates-gallery">
           {certificatesData.map((cert, idx) => (
             <CertificateCard key={idx} certificate={cert} onClick={() => setActiveCertificate(cert)} />
