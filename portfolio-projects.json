@@ -7,11 +7,16 @@
       "title": "Retail Business Intelligence Dashboard",
       "description": "An end-to-end Power BI solution designed to transform retail sales and customer data into clear commercial insights.",
       "highlights": [
-        "Analyzed revenue, customer behavior, product performance, and branch trends",
-        "Built interactive KPI dashboards for business performance monitoring",
-        "Applied DAX, Power Query, and data modeling to create reliable reporting"
+        "Tracked 965.79K in revenue, 375.35K in profit, and a 38.86% profit margin",
+        "Identified the Vape category as the largest revenue contributor at 43.34%",
+        "Flagged 17 products at the reorder threshold while inventory coverage remained 89.38%"
       ],
-      "tools": ["Power BI", "DAX", "Power Query", "Data Modeling"],
+      "tools": [
+        "Power BI",
+        "DAX",
+        "Power Query",
+        "Data Modeling"
+      ],
       "repositoryUrl": "https://github.com/Yasir101-hi/retail-business-intelligence-dashboard",
       "imageUrl": "/assets/projects/retail-bi-dashboard.webp",
       "caseStudy": {
@@ -44,7 +49,12 @@
         "Measured an 87.36% A–D pass rate",
         "Identified 203 prerequisite-violation enrollments affecting 183 students"
       ],
-      "tools": ["SQL", "Python", "Power BI", "Data Modeling"],
+      "tools": [
+        "SQL",
+        "Python",
+        "Power BI",
+        "Data Modeling"
+      ],
       "repositoryUrl": "https://github.com/Yasir101-hi/university-database-analysis-sql-python-powerbi",
       "imageUrl": "/assets/projects/student-success.png",
       "caseStudy": {
@@ -77,7 +87,12 @@
         "Measured an 89.8% decline in oil rate",
         "Measured a 53.3% decline in pressure"
       ],
-      "tools": ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+      "tools": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Data Analysis"
+      ],
       "repositoryUrl": "https://github.com/Yasir101-hi/oil-well-807-analysis",
       "imageUrl": "/assets/projects/oil-well-analysis.webp",
       "caseStudy": {
@@ -110,7 +125,12 @@
         "Identified ages 25–34 as the largest age group",
         "Identified Data Scientist as the largest professional role, with 17,128 respondents"
       ],
-      "tools": ["Python", "Pandas", "Matplotlib", "Data Cleaning"],
+      "tools": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Data Cleaning"
+      ],
       "repositoryUrl": "https://github.com/Yasir101-hi/global-data-science-survey-analysis",
       "imageUrl": "/assets/projects/global-survey-analysis.webp",
       "caseStudy": {
