@@ -102,11 +102,11 @@ const platforms = [
   { name: "Power BI", icon: "/assets/tools/power-bi.svg", short: "PBI" },
   { name: "Microsoft Excel", icon: "/assets/tools/microsoft-excel.svg", short: "XL" },
   { name: "SQL Server", icon: "/assets/tools/sql-server.svg", short: "SQL" },
-  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB", short: "Py" },
-  { name: "Jupyter Notebook", icon: "https://cdn.simpleicons.org/jupyter/F37626", short: "JN" },
+  { name: "Python", icon: "/assets/tools/python.svg", short: "Py" },
+  { name: "Jupyter Notebook", icon: "/assets/tools/jupyter.svg", short: "JN" },
   { name: "VS Code", icon: "/assets/tools/vs-code.svg", short: "VS" },
-  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF", short: "GH" },
-  { name: "Kaggle", icon: "https://cdn.simpleicons.org/kaggle/20BEFF", short: "K" }
+  { name: "GitHub", icon: "/assets/tools/github.svg", short: "GH" },
+  { name: "Kaggle", icon: "/assets/tools/kaggle.svg", short: "K" }
 ];
 
 const certificatesData = [
