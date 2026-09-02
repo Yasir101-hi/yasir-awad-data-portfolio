@@ -640,3 +640,40 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .experience.section, .credentials.section, .community.section { padding-top: 64px; padding-bottom: 64px; }
   .contact { padding-top: 68px; padding-bottom: 54px; }
 }
+
+
+/* Certificate gallery progressive disclosure — 2026-09 */
+.certificates-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+.certificates-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid var(--emerald);
+  background: transparent;
+  color: var(--navy);
+  font: 750 14px/1.2 Inter, Arial, sans-serif;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.certificates-toggle:hover {
+  background: var(--emerald);
+  color: #fff;
+}
+.certificates-toggle:focus-visible {
+  outline: 3px solid rgba(21, 155, 116, .3);
+  outline-offset: 4px;
+}
+.certificates-toggle span { color: var(--emerald); }
+.certificates-toggle:hover span { color: #fff; }
+
+@media (max-width: 640px) {
+  .certificates-actions { margin-top: 24px; }
+  .certificates-toggle { width: 100%; }
+}
