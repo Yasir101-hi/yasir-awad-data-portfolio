@@ -726,22 +726,22 @@ export default function App() {
                 <p className="project-eyebrow">{project.category}</p>
                 <h3>{project.title}</h3>
                 <p className="text-justify">{project.description}</p>
-                <ul>{project.highlights.map((item) => <li className="text-justify" key={item}>{item}</li>)}</ul>
+                <p className="project-results-label">Key results</p>
+                <ul className="project-results">{project.highlights.map((item) => <li className="text-justify" key={item}>{item}</li>)}</ul>
                 <div className="tags">{project.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
-                <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginTop: '28px' }}>
-                  <button 
-                    className="text-link" 
+                <div className="project-actions">
+                  <button
+                    type="button"
+                    className="text-link"
                     onClick={() => setActiveCaseStudy(project)}
-                    style={{ border: 'none', background: 'none', cursor: 'pointer', padding: '0 0 5px', marginTop: 0 }}
                   >
                     View Case Study <Arrow />
                   </button>
-                  <a 
-                    className="text-link" 
-                    href={project.repositoryUrl} 
-                    target="_blank" 
+                  <a
+                    className="text-link project-github-link"
+                    href={project.repositoryUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    style={{ marginTop: 0, fontWeight: 500, opacity: 0.8 }}
                   >
                     View on GitHub <Arrow />
                   </a>
