@@ -17,7 +17,7 @@ export default function Resume() {
     <main className="resume-page">
       <div className="resume-toolbar">
         <a href="/">← Back to Portfolio</a>
-        <button type="button" onClick={() => window.print()}>Print / Save as PDF</button>
+        <button type="button" aria-label="Print resume or save it as a PDF" onClick={() => window.print()}>Print / Save as PDF</button>
       </div>
 
       <article className="resume-sheet">
@@ -31,7 +31,7 @@ export default function Resume() {
             <span>6th of October City, Giza, Egypt</span>
             <span>Open to international relocation and visa-sponsored opportunities</span>
             <span>+20 150 715 1549</span>
-            <a href="mailto:yasir.m.ahmed10@gmail.com">yasir.m.ahmed10@gmail.com</a>
+            <a href="mailto:yasir.petro.analytics@outlook.com">yasir.petro.analytics@outlook.com</a>
             <a href="https://www.linkedin.com/in/yasirawad">linkedin.com/in/yasirawad</a>
             <a href="https://github.com/Yasir101-hi">github.com/Yasir101-hi</a>
           </address>
@@ -99,7 +99,7 @@ export default function Resume() {
               <li>Built a four-page executive dashboard integrating sales, customer, inventory, and branch data.</li>
               <li>Identified customer segments, fast-moving products, low-stock risks, and branch performance opportunities.</li>
             </ul>
-            <a href="https://github.com/Yasir101-hi/retail-business-intelligence-dashboard">View on GitHub ↗</a>
+            <a href="https://github.com/Yasir101-hi/retail-business-intelligence-dashboard" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
           </article>
 
           <article>
@@ -108,7 +108,7 @@ export default function Resume() {
               <li>Analyzed a normalized database covering 15+ academic entities and developed reporting for student success, course capacity, classroom utilization, and teaching quality.</li>
               <li>Detected prerequisite, missing-value, and capacity issues through SQL and Python validation and translated findings into recommendations.</li>
             </ul>
-            <a href="https://github.com/Yasir101-hi/university-database-analysis-sql-python-powerbi">View on GitHub ↗</a>
+            <a href="https://github.com/Yasir101-hi/university-database-analysis-sql-python-powerbi" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
           </article>
 
           <article>
@@ -117,7 +117,7 @@ export default function Resume() {
               <li>Analyzed more than 8 years of production data covering oil decline, water cut, pressure depletion, and gas-oil ratio behavior.</li>
               <li>Identified approximately 90% production decline from peak levels and assessed indicators relevant to mature-well optimization and EOR decisions.</li>
             </ul>
-            <a href="https://github.com/Yasir101-hi/oil-well-807-analysis">View on GitHub ↗</a>
+            <a href="https://github.com/Yasir101-hi/oil-well-807-analysis" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
           </article>
         </section>
 
@@ -153,11 +153,11 @@ export default function Resume() {
           <section className="resume-section">
             <h2>Certifications</h2>
             <ul className="resume-certifications">
+              <li><strong>Microsoft Power BI Data Analyst (PL-300)</strong><span>Exam preparation in progress · 2026</span></li>
               <li><strong>Data Analysis Diploma</strong><span>MEC Academy · 2025</span></li>
-              <li><strong>Python for Data Science, AI &amp; Development</strong><span>IBM, Coursera · 2025</span></li>
               <li><strong>Data Analytics Job Simulation</strong><span>Deloitte, Forage · 2025</span></li>
+              <li><strong>Business Analysis Basics</strong><span>Great Learning · 2026</span></li>
               <li><strong>Oil &amp; Gas Operations &amp; Markets</strong><span>Duke University, Coursera · 2025</span></li>
-              <li><strong>Graduate Engineer Registration</strong><span>Board of Engineers Malaysia · 2021</span></li>
             </ul>
           </section>
         </div>
