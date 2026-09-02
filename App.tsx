@@ -535,7 +535,7 @@ function ResumePage() {
           </div>
           <address>
             <span>Cairo, Egypt</span>
-            <a href="mailto:yasir.m.ahmed10@gmail.com">yasir.m.ahmed10@gmail.com</a>
+            <a href="mailto:yasir.petro.analytics@outlook.com">yasir.petro.analytics@outlook.com</a>
             <a href="https://www.linkedin.com/in/yasirawad">linkedin.com/in/yasirawad</a>
             <a href="https://github.com/Yasir101-hi">github.com/Yasir101-hi</a>
           </address>
@@ -664,7 +664,7 @@ export default function App() {
       <section className="hero" id="home">
         <div className="hero-copy">
           <p className="kicker"><span /> Data, business &amp; operations</p>
-          <h1>Data Analyst &amp;<br />Business Intelligence</h1>
+          <h1 aria-label="Data Analyst and Business Intelligence">Data Analyst &amp;<br />{" "}Business Intelligence</h1>
           <p className="hero-intro text-justify">I turn complex business and operational data into clear dashboards, reliable reports, and decision-ready insights using Power BI, SQL, Python, and Excel.</p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">Explore Projects <Arrow /></a>
@@ -715,7 +715,7 @@ export default function App() {
 
       <section className="projects section" id="projects">
         <div className="section-heading">
-          <div><p className="section-label">02 · Selected work</p><h2>Analysis with a clear<br /><em>decision at the end.</em></h2></div>
+          <div><p className="section-label">02 · Selected work</p><h2>Analysis with a clear<br />{" "}<em>decision at the end.</em></h2></div>
           <p className="text-justify">Selected projects demonstrating business intelligence, end-to-end data analysis, operational thinking, and evidence-based recommendations.</p>
         </div>
         <div className="project-list">
@@ -756,7 +756,7 @@ export default function App() {
 
       <section className="experience section" id="experience">
         <div className="section-heading">
-          <div><p className="section-label">03 · Experience</p><h2>Experience across data,<br /><em>business, and operations.</em></h2></div>
+          <div><p className="section-label">03 · Experience</p><h2>Experience across data,<br />{" "}<em>business, and operations.</em></h2></div>
           <p className="text-justify">A combination of analytics projects, structured training, business experience, and engineering exposure.</p>
         </div>
         <div className="experience-groups">
@@ -836,7 +836,7 @@ export default function App() {
         <div className="education-overview">
           <div className="credentials-intro">
             <p className="section-label">05 · Credentials</p>
-            <h2>Petroleum Engineering,<br /><em>analytical by design.</em></h2>
+            <h2>Petroleum Engineering,<br />{" "}<em>analytical by design.</em></h2>
             <article>
               <time className="education-date">2016 — 2021</time>
               <h3>Bachelor of Engineering (Honours)</h3>
@@ -905,7 +905,7 @@ export default function App() {
       <section className="community section" id="community">
         <div className="community-heading">
           <p className="section-label">06 · Professional Community</p>
-          <h2>Connected to the regional<br /><em>data community.</em></h2>
+          <h2>Connected to the regional<br />{" "}<em>data community.</em></h2>
         </div>
         <article className="membership-card">
           <div className="membership-badge">
@@ -933,14 +933,10 @@ export default function App() {
       <section className="contact" id="contact">
         <p className="section-label light">07 · Contact</p>
         <h2>Let&apos;s turn data into clear decisions.</h2>
-        <p className="text-justify">I am open to data analysis, business intelligence, reporting, business analysis, and operations analysis opportunities with remote, relocation, or visa-sponsorship options.</p>
+        <p className="text-justify">I am open to Data Analyst, BI Analyst, Reporting Analyst, and Operations Analyst opportunities with remote, relocation, or visa-sponsorship options.</p>
         <a href="mailto:yasir.petro.analytics@outlook.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Yasir%20Awad&body=Hello%20Yasir%2C%0A%0AI%20viewed%20your%20data%20analytics%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0A%0ABest%20regards%2C" className="button primary contact-button">Email Me <Arrow /></a>
         <div className="contact-links">
-          <a href="mailto:yasir.m.ahmed10@gmail.com" aria-label="Primary Email">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            yasir.m.ahmed10@gmail.com
-          </a>
-          <a href="mailto:yasir.petro.analytics@outlook.com" aria-label="Analytics Email">
+          <a href="mailto:yasir.petro.analytics@outlook.com" aria-label="Email">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             yasir.petro.analytics@outlook.com
           </a>
