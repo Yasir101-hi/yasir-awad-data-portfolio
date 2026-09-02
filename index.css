@@ -66,8 +66,8 @@ h1 em, h2 em { color: var(--emerald); font-style: italic; }
 .tool-strip svg { flex-shrink: 0; }
 
 .hero-visual { background: radial-gradient(circle at 60% 40%, #163b59 0, var(--navy) 58%); position: relative; overflow: hidden; min-height: 620px; }
-.hero-portrait-visual { background: var(--navy); }
-.hero-portrait-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center center; }
+.hero-portrait-visual { background: radial-gradient(circle at 50% 46%, rgba(21,155,116,.3) 0, #082338 42%, var(--navy) 78%); }
+.hero-portrait-image { position: absolute; inset: 0 auto 0 -5%; display: block; width: 110%; height: 100%; object-fit: contain; object-position: center center; }
 .grid-lines { position: absolute; inset: 6%; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px); background-size: 82px 82px; mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 84%, transparent); }
 .portrait { position: absolute; left: 19%; right: 8%; bottom: -7%; height: 76%; filter: drop-shadow(0 20px 36px rgba(0,0,0,.4)); }
 .portrait-head { position: absolute; z-index: 2; width: 31%; aspect-ratio: .78; left: 36%; top: 0; border-radius: 47% 48% 43% 44%; background: linear-gradient(145deg,#677687,#263c51); box-shadow: inset 20px -12px 35px rgba(4,18,31,.6); }
@@ -446,7 +446,7 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .tool-strip a:nth-child(2) { border-right: 0; }
   .tool-strip a:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .hero-visual { min-height: 0; aspect-ratio: 6 / 5; }
-  .hero-portrait-image { object-position: center center; }
+  .hero-portrait-image { inset: 0; width: 100%; object-position: center center; }
   .donut { width: 95px; box-shadow: inset 0 0 0 21px var(--navy-2); }
   .section, .statement { padding: 82px 22px; }
   .statement dl { grid-template-columns: 1fr; }
@@ -496,9 +496,9 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
 }
 
 .text-justify {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 /* Public, privacy-safe resume page */
