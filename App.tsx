@@ -532,7 +532,7 @@ function ResumePage() {
     <main className="resume-page">
       <div className="resume-toolbar">
         <a href="/">← Back to Portfolio</a>
-        <button type="button" onClick={() => window.print()}>Print / Save as PDF</button>
+        <button type="button" aria-label="Print resume or save it as a PDF" onClick={() => window.print()}>Print / Save as PDF</button>
       </div>
       <article className="resume-sheet">
         <header className="resume-header">
