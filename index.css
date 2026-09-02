@@ -677,3 +677,49 @@ footer { padding: 25px clamp(24px,6vw,96px); display: flex; justify-content: spa
   .certificates-actions { margin-top: 24px; }
   .certificates-toggle { width: 100%; }
 }
+
+
+/* Case study outcomes and resume link refinement — 2026-09 */
+.case-study-outcomes {
+  padding: 22px;
+  border: 1px solid rgba(21, 155, 116, .26);
+  background: rgba(21, 155, 116, .055);
+}
+.case-study-outcomes-label {
+  margin: 0 0 14px !important;
+  color: var(--emerald);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.modal-body .case-study-outcomes ul {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+.modal-body .case-study-outcomes li {
+  position: relative;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--navy);
+  font-weight: 650;
+  line-height: 1.55;
+}
+.modal-body .case-study-outcomes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--emerald);
+  font-weight: 900;
+}
+.resume-projects a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .case-study-outcomes { padding: 18px; }
+  .modal-body .case-study-outcomes li { font-size: 14px; }
+}
