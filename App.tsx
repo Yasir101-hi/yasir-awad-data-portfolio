@@ -618,6 +618,7 @@ export default function App() {
   const [activeCaseStudy, setActiveCaseStudy] = React.useState<Project | null>(null);
   const [activeProjectImage, setActiveProjectImage] = React.useState<Project | null>(null);
   const [activeCertificate, setActiveCertificate] = React.useState<any | null>(null);
+  const [showAllCertificates, setShowAllCertificates] = React.useState(false);
 
   return (
     <main>
@@ -895,10 +896,22 @@ export default function App() {
           </div>
         </article>
 
-        <div className="certificates-gallery">
-          {certificatesData.map((cert, idx) => (
-            <CertificateCard key={idx} certificate={cert} onClick={() => setActiveCertificate(cert)} />
+        <div className="certificates-gallery" id="certificates-gallery">
+          {(showAllCertificates ? certificatesData : certificatesData.slice(0, 3)).map((cert, idx) => (
+            <CertificateCard key={cert.title} certificate={cert} onClick={() => setActiveCertificate(cert)} />
           ))}
+        </div>
+        <div className="certificates-actions">
+          <button
+            type="button"
+            className="certificates-toggle"
+            aria-expanded={showAllCertificates}
+            aria-controls="certificates-gallery"
+            onClick={() => setShowAllCertificates((current) => !current)}
+          >
+            {showAllCertificates ? "Show fewer certificates" : `View all ${certificatesData.length} certificates`}
+            <span aria-hidden="true">{showAllCertificates ? "↑" : "↓"}</span>
+          </button>
         </div>
       </section>
 
