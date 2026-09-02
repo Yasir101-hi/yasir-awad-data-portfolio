@@ -319,6 +319,14 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
         
         {project.caseStudy && (
           <div className="modal-body">
+            <section className="case-study-outcomes" aria-labelledby="case-study-outcomes-title">
+              <p className="case-study-outcomes-label" id="case-study-outcomes-title">Project outcomes</p>
+              <ul>
+                {project.highlights.slice(0, 3).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </section>
             <section>
               <h3>Business Problem</h3>
               <p>{project.caseStudy.businessProblem}</p>
@@ -581,7 +589,7 @@ function ResumePage() {
             <article key={project.id}>
               <div><h3>{project.title}</h3><span>{project.tools.join(" · ")}</span></div>
               <p>{project.highlights[0]}</p>
-              <a href={project.repositoryUrl}>View on GitHub ↗</a>
+              <a href={project.repositoryUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>View on GitHub ↗</a>
             </article>
           ))}
         </section>
