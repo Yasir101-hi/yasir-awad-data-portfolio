@@ -709,17 +709,21 @@ export default function App() {
       </section>
 
       <section className="statement" id="about">
-        <p className="section-label">01 · Profile</p>
-        <div>
-          <h2>I connect technical analysis with <em>business context.</em></h2>
-          <p className="text-justify">Data Analyst with a background in Petroleum Engineering and hands-on experience using Power BI, SQL, Python, and Excel. I build dashboards, reports, and analytical solutions that help stakeholders understand performance, identify operational issues, and make informed decisions.</p>
+        <div className="statement-copy">
+          <p className="section-label">01 · Profile</p>
+          <div className="statement-intro">
+            <h2>I connect technical analysis with <em>business context.</em></h2>
+            <p className="text-justify">Data Analyst with a background in Petroleum Engineering and hands-on experience using Power BI, SQL, Python, and Excel. I build dashboards, reports, and analytical solutions that help stakeholders understand performance, identify operational issues, and make informed decisions.</p>
+          </div>
         </div>
-        <dl>
-          <div><dt>Focus</dt><dd>Business intelligence and KPI reporting</dd></div>
-          <div><dt>Domains</dt><dd>Business, operations, education, and energy</dd></div>
-          <div><dt>Based in</dt><dd>Cairo, Egypt</dd></div>
-          <div><dt>Availability</dt><dd>Open to remote, relocation, and visa sponsorship opportunities</dd></div>
-        </dl>
+        <aside className="statement-panel" aria-label="Professional profile details">
+          <dl>
+            <div><dt>Focus</dt><dd>Power BI dashboards, KPI reporting, and operational analytics</dd></div>
+            <div><dt>Domains</dt><dd>Retail, operations, education, and energy</dd></div>
+            <div><dt>Background</dt><dd>Petroleum Engineering</dd></div>
+            <div><dt>Availability</dt><dd>Open to remote, relocation, and visa sponsorship opportunities</dd></div>
+          </dl>
+        </aside>
       </section>
 
       <section className="projects section" id="projects">
